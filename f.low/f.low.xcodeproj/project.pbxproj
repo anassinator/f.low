@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89DD49341C790BE8002DFBBC /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD49331C790BE8002DFBBC /* StatusMenuController.swift */; };
 		FACC80511C78F275006E7B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC80501C78F275006E7B46 /* AppDelegate.swift */; };
 		FACC80531C78F275006E7B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACC80521C78F275006E7B46 /* Assets.xcassets */; };
 		FACC80561C78F275006E7B46 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACC80541C78F275006E7B46 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89DD49331C790BE8002DFBBC /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		FACC804D1C78F275006E7B46 /* f.low.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = f.low.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACC80501C78F275006E7B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACC80521C78F275006E7B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				FACC80501C78F275006E7B46 /* AppDelegate.swift */,
+				89DD49331C790BE8002DFBBC /* StatusMenuController.swift */,
 				FACC80521C78F275006E7B46 /* Assets.xcassets */,
 				FACC80541C78F275006E7B46 /* MainMenu.xib */,
 				FACC80571C78F275006E7B46 /* Info.plist */,
@@ -128,6 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DD49341C790BE8002DFBBC /* StatusMenuController.swift in Sources */,
 				FACC80511C78F275006E7B46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +273,7 @@
 				FACC805C1C78F275006E7B46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
