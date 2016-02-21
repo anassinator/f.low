@@ -17,7 +17,7 @@ class VolumeController {
         // Get address of default audio device property.
         var propertyAddress = AudioObjectPropertyAddress(
             mSelector: AudioObjectPropertySelector(
-                kAudioHardwarePropertyDefaultOutputDevice),
+                kAudioHardwarePropertyDefaultSystemOutputDevice),
             mScope: AudioObjectPropertyScope(kAudioObjectPropertyScopeGlobal),
             mElement: AudioObjectPropertyElement(
                 kAudioObjectPropertyElementMaster))

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8919B1121C795EBD009D929E /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919B1111C795EBD009D929E /* FlowController.swift */; };
 		89DD49341C790BE8002DFBBC /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD49331C790BE8002DFBBC /* StatusMenuController.swift */; };
 		89DD49361C79154D002DFBBC /* VolumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD49351C79154D002DFBBC /* VolumeController.swift */; };
 		A50FAC5F1C79897700400F04 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FAC5E1C79897700400F04 /* PreferencesWindowController.swift */; };
@@ -16,9 +17,12 @@
 		FACC80511C78F275006E7B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC80501C78F275006E7B46 /* AppDelegate.swift */; };
 		FACC80531C78F275006E7B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACC80521C78F275006E7B46 /* Assets.xcassets */; };
 		FACC80561C78F275006E7B46 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACC80541C78F275006E7B46 /* MainMenu.xib */; };
+		FACFCCB41C7961050002ADDB /* VolumeMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCCB31C7961050002ADDB /* VolumeMonitor.swift */; };
+		FACFCCB61C7964FF0002ADDB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACFCCB51C7964FF0002ADDB /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8919B1111C795EBD009D929E /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		89DD49331C790BE8002DFBBC /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		89DD49351C79154D002DFBBC /* VolumeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeController.swift; sourceTree = "<group>"; };
 		A50FAC5E1C79897700400F04 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		FACC80521C78F275006E7B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACC80551C78F275006E7B46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		FACC80571C78F275006E7B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACFCCB31C7961050002ADDB /* VolumeMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeMonitor.swift; sourceTree = "<group>"; };
+		FACFCCB51C7964FF0002ADDB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACFCCB61C7964FF0002ADDB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +53,7 @@
 		FACC80441C78F275006E7B46 = {
 			isa = PBXGroup;
 			children = (
+				FACFCCB51C7964FF0002ADDB /* AVFoundation.framework */,
 				FACC804F1C78F275006E7B46 /* f.low */,
 				FACC804E1C78F275006E7B46 /* Products */,
 			);
@@ -64,12 +72,14 @@
 			children = (
 				A50FAC661C79AEDA00400F04 /* AboutWindowController.swift */,
 				FACC80501C78F275006E7B46 /* AppDelegate.swift */,
+				FACFCCB31C7961050002ADDB /* VolumeMonitorController.swift */,
 				89DD49331C790BE8002DFBBC /* StatusMenuController.swift */,
 				A50FAC621C79AD8100400F04 /* AboutWindow.xib */,
 				A50FAC5E1C79897700400F04 /* PreferencesWindowController.swift */,
 				A50FAC601C7989F800400F04 /* PreferencesWindow.xib */,
 				FACC80521C78F275006E7B46 /* Assets.xcassets */,
 				89DD49351C79154D002DFBBC /* VolumeController.swift */,
+				8919B1111C795EBD009D929E /* FlowController.swift */,
 				FACC80571C78F275006E7B46 /* Info.plist */,
 				FACC80541C78F275006E7B46 /* MainMenu.xib */,
 			);
@@ -148,11 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACFCCB41C7961050002ADDB /* VolumeMonitorController.swift in Sources */,
 				89DD49341C790BE8002DFBBC /* StatusMenuController.swift in Sources */,
 				A50FAC681C79AEDA00400F04 /* AboutWindowController.swift in Sources */,
 				89DD49361C79154D002DFBBC /* VolumeController.swift in Sources */,
 				A50FAC5F1C79897700400F04 /* PreferencesWindowController.swift in Sources */,
 				FACC80511C78F275006E7B46 /* AppDelegate.swift in Sources */,
+				8919B1121C795EBD009D929E /* FlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
