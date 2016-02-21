@@ -16,11 +16,25 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="dCQ-8q-bHt" userLabel="StatusMenuController" customClass="StatusMenuController" customModule="f_low" customModuleProvider="target">
             <connections>
-                <outlet property="statusMenu" destination="YKP-ec-1hK" id="dSz-eP-R7G"/>
+                <outlet property="statusMenu" destination="YKP-ec-1hK" id="YT2-Xk-XA0"/>
             </connections>
         </customObject>
         <menu id="YKP-ec-1hK">
             <items>
+                <menuItem title="About f.low" id="7G8-LY-4ps">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="0D5-yw-uL1"/>
+                <menuItem title="Preferences" id="EhW-c7-xcx">
+                    <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                    <connections>
+                        <action selector="openPreferenceWindow:" target="dCQ-8q-bHt" id="lcy-hA-FRl"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Disable" id="mTj-MN-BHm">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="3Tk-AD-Aka"/>
                 <menuItem title="Quit f.low" id="eUr-nb-W2f" userLabel="Quit Clicked">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
