@@ -36,6 +36,10 @@ class FlowController {
     }
     
     func update(average: Float32, peak: Float32) {
+        if Preferences.getDisabled() {
+            return
+        }
+
         let originalVolume = dBToLinear(peak)
         let fittedVolume = fit(originalVolume)
         let min = Preferences.getMinVolume()

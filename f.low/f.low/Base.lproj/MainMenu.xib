@@ -33,6 +33,9 @@
                 </menuItem>
                 <menuItem title="Disable" id="mTj-MN-BHm">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="disableToggled:" target="dCQ-8q-bHt" id="irf-f8-iWJ"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="3Tk-AD-Aka"/>
                 <menuItem title="Quit f.low" id="eUr-nb-W2f" userLabel="Quit Clicked">

@@ -21,6 +21,11 @@ class StatusMenuController: NSObject {
         self.preferencesWindowController.showWindow(self)
     }
 
+    @IBAction func disableToggled(sender: NSMenuItem) {
+        Preferences.setDisabled(!Preferences.getDisabled())
+        sender.state = 1 - sender.state
+    }
+
     @IBAction func quitClicked(sender: NSMenuItem) {
         NSApplication.sharedApplication().terminate(self)
     }

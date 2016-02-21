@@ -10,8 +10,13 @@ import Cocoa
 
 
 class Preferences {
+    static private var disabled: Bool = false
     static private var minVolume: Float32 = 0.2
     static private var maxVolume: Float32 = 1.0
+
+    static func getDisabled() -> Bool {
+        return disabled
+    }
 
     static func getMinVolume() -> Float32 {
         return minVolume
@@ -19,6 +24,10 @@ class Preferences {
     
     static func getMaxVolume() -> Float32 {
         return maxVolume
+    }
+
+    static func setDisabled(val: Bool) {
+        disabled = val
     }
 
     static func setMinVolume(val: Float32) {
