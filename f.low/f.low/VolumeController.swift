@@ -9,7 +9,7 @@
 import AudioToolbox
 
 class VolumeController {
-    func getOutputDevice() -> AudioDeviceID {
+    private func getOutputDevice() -> AudioDeviceID {
         // Set up device ID.
         var deviceID = AudioDeviceID(0)
         var deviceIDSize = UInt32(sizeofValue(deviceID))
@@ -39,7 +39,7 @@ class VolumeController {
         return deviceID
     }
   
-    func getVolumeProperyAddress() -> AudioObjectPropertyAddress {
+    private func getVolumeProperyAddress() -> AudioObjectPropertyAddress {
         // Get address of master volume property.
         return AudioObjectPropertyAddress(
             mSelector: AudioObjectPropertySelector(
