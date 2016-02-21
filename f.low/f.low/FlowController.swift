@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Darwin
 
 class FlowController {
     private let vm = VolumeMonitor()
@@ -22,6 +23,10 @@ class FlowController {
         return x * (max - min) + min
     }
     
+    private func fit(x: Float32) -> Float32 {
+        return min(Float32(log(x + 0.6) + 0.6), 1.0)
+    }
+
     func start() {
         vm.start(update)
     }
@@ -31,8 +36,9 @@ class FlowController {
     }
     
     func update(average: Float32, peak: Float32) {
-        let originalVolume = dBToLinear(average)
-        let volume = mapTo(originalVolume, min: 0.2, max: 1.0)
+        let originalVolume = dBToLinear(peak)
+        let fittedVolume = fit(originalVolume)
+        let volume = mapTo(fittedVolume, min: 0.2, max: 1.0)
         VolumeController.setVolume(volume)
     }
 }
