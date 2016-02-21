@@ -16,6 +16,11 @@ class StatusMenuController: NSObject {
                      .statusItemWithLength(NSVariableStatusItemLength)
 
     private var preferencesWindowController: PreferencesWindowController!
+    private var aboutWindowController: AboutWindowController!
+
+    @IBAction func aboutClicked(sender: NSMenuItem) {
+        self.aboutWindowController.showWindow(self)
+    }
 
     @IBAction func openPreferenceWindow(sender: NSMenuItem) {
         self.preferencesWindowController.showWindow(self)
@@ -34,5 +39,6 @@ class StatusMenuController: NSObject {
         statusItem.title = "f.low"
         statusItem.menu = statusMenu
         self.preferencesWindowController = PreferencesWindowController()
+        self.aboutWindowController = AboutWindowController()
     }
 }

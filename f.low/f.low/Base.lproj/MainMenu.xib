@@ -23,6 +23,9 @@
             <items>
                 <menuItem title="About f.low" id="7G8-LY-4ps">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="aboutClicked:" target="dCQ-8q-bHt" id="q6x-0r-2LO"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="0D5-yw-uL1"/>
                 <menuItem title="Preferences" id="EhW-c7-xcx">
