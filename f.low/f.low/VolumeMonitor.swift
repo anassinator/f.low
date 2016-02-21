@@ -49,7 +49,6 @@ class VolumeMonitor: NSObject {
             recorder.meteringEnabled = true
             recorder.record()
             levelTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "levelTimerCallback:", userInfo: nil, repeats: true)
-            CFRunLoopRun()
         }
     }
     
