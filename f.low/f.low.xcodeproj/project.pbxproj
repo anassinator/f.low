@@ -11,6 +11,8 @@
 		89DD49361C79154D002DFBBC /* VolumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD49351C79154D002DFBBC /* VolumeController.swift */; };
 		A50FAC5F1C79897700400F04 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FAC5E1C79897700400F04 /* PreferencesWindowController.swift */; };
 		A50FAC611C7989F800400F04 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50FAC601C7989F800400F04 /* PreferencesWindow.xib */; };
+		A50FAC631C79AD8100400F04 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50FAC621C79AD8100400F04 /* AboutWindow.xib */; };
+		A50FAC681C79AEDA00400F04 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FAC661C79AEDA00400F04 /* AboutWindowController.swift */; };
 		FACC80511C78F275006E7B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC80501C78F275006E7B46 /* AppDelegate.swift */; };
 		FACC80531C78F275006E7B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACC80521C78F275006E7B46 /* Assets.xcassets */; };
 		FACC80561C78F275006E7B46 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACC80541C78F275006E7B46 /* MainMenu.xib */; };
@@ -21,6 +23,8 @@
 		89DD49351C79154D002DFBBC /* VolumeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeController.swift; sourceTree = "<group>"; };
 		A50FAC5E1C79897700400F04 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		A50FAC601C7989F800400F04 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		A50FAC621C79AD8100400F04 /* AboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindow.xib; sourceTree = "<group>"; };
+		A50FAC661C79AEDA00400F04 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutWindowController.swift; path = ../AboutWindowController.swift; sourceTree = "<group>"; };
 		FACC804D1C78F275006E7B46 /* f.low.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = f.low.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACC80501C78F275006E7B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACC80521C78F275006E7B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,8 +62,10 @@
 		FACC804F1C78F275006E7B46 /* f.low */ = {
 			isa = PBXGroup;
 			children = (
+				A50FAC661C79AEDA00400F04 /* AboutWindowController.swift */,
 				FACC80501C78F275006E7B46 /* AppDelegate.swift */,
 				89DD49331C790BE8002DFBBC /* StatusMenuController.swift */,
+				A50FAC621C79AD8100400F04 /* AboutWindow.xib */,
 				A50FAC5E1C79897700400F04 /* PreferencesWindowController.swift */,
 				A50FAC601C7989F800400F04 /* PreferencesWindow.xib */,
 				FACC80521C78F275006E7B46 /* Assets.xcassets */,
@@ -131,6 +137,7 @@
 				FACC80531C78F275006E7B46 /* Assets.xcassets in Resources */,
 				FACC80561C78F275006E7B46 /* MainMenu.xib in Resources */,
 				A50FAC611C7989F800400F04 /* PreferencesWindow.xib in Resources */,
+				A50FAC631C79AD8100400F04 /* AboutWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89DD49341C790BE8002DFBBC /* StatusMenuController.swift in Sources */,
+				A50FAC681C79AEDA00400F04 /* AboutWindowController.swift in Sources */,
 				89DD49361C79154D002DFBBC /* VolumeController.swift in Sources */,
 				A50FAC5F1C79897700400F04 /* PreferencesWindowController.swift in Sources */,
 				FACC80511C78F275006E7B46 /* AppDelegate.swift in Sources */,

@@ -15,23 +15,19 @@ class StatusMenuController: NSObject {
                      .systemStatusBar()
                      .statusItemWithLength(NSVariableStatusItemLength)
 
-    private var preferencesWindowController: PreferencesWindowController?
+    private var preferencesWindowController: PreferencesWindowController!
 
     @IBAction func openPreferenceWindow(sender: NSMenuItem) {
-        if preferencesWindowController == nil {
-            preferencesWindowController = PreferencesWindowController()
-        }
-        preferencesWindowController?.showWindow(self)
+        self.preferencesWindowController.showWindow(self)
     }
-
 
     @IBAction func quitClicked(sender: NSMenuItem) {
         NSApplication.sharedApplication().terminate(self)
     }
 
-
     override func awakeFromNib() {
         statusItem.title = "f.low"
         statusItem.menu = statusMenu
+        self.preferencesWindowController = PreferencesWindowController()
     }
 }
