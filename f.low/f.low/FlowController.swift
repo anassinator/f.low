@@ -38,7 +38,9 @@ class FlowController {
     func update(average: Float32, peak: Float32) {
         let originalVolume = dBToLinear(peak)
         let fittedVolume = fit(originalVolume)
-        let volume = mapTo(fittedVolume, min: 0.2, max: 1.0)
+        let min = Preferences.getMinVolume()
+        let max = Preferences.getMaxVolume()
+        let volume = mapTo(fittedVolume, min: min, max: max)
         VolumeController.setVolume(volume)
     }
 }

@@ -8,14 +8,33 @@
 
 import Cocoa
 
+
+class Preferences {
+    static private var minVolume: Float32 = 0.2
+    static private var maxVolume: Float32 = 1.0
+
+    static func getMinVolume() -> Float32 {
+        return minVolume
+    }
+    
+    static func getMaxVolume() -> Float32 {
+        return maxVolume
+    }
+
+    static func setMinVolume(val: Float32) {
+        minVolume = val
+    }
+    
+    static func setMaxVolume(val: Float32) {
+        maxVolume = val
+    }
+}
+
 class PreferencesWindowController: NSWindowController {
     @IBOutlet weak var preferencesWindow: NSWindow!
     @IBOutlet weak var minSlider: NSSlider!
     @IBOutlet weak var maxSlider: NSSlider!
 
-    private var minVolume: Float32 = 0.2
-    private var maxVolume: Float32 = 1.0
-    
     convenience init() {
         self.init(windowNibName: "PreferencesWindow")
     }
@@ -29,30 +48,10 @@ class PreferencesWindowController: NSWindowController {
         self.window?.releasedWhenClosed = false
     }
 
-    func applicationShouldHandleReopen(sender: NSApplication,
-                                       hasVisibleWindows: Bool) -> Bool {
-        if hasVisibleWindows {
-            print("visible")
-            //preferencesWindowController?.showWindow(self)
-        } else {
-            print("invisible")
-            //preferencesWindowController?.makeKeyAndOrderFront(self)
-        }
-        return true
-    }
-
     @IBAction func minVolumeChanged(sender: NSSlider) {
-        minVolume = Float32(sender.doubleValue / 100)
+        Preferences.setMinVolume(Float32(sender.doubleValue / 100))
     }
     @IBAction func maxVolumeChanged(sender: NSSlider) {
-        maxVolume = Float32(sender.doubleValue / 100)
-    }
-    
-    func getMinVolume() -> Float32 {
-        return minVolume
-    }
-
-    func getMaxVolume() -> Float32 {
-        return maxVolume
+        Preferences.setMaxVolume(Float32(sender.doubleValue / 100))
     }
 }
