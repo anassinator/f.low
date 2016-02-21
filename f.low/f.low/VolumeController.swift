@@ -9,7 +9,7 @@
 import AudioToolbox
 
 class VolumeController {
-    private func getOutputDevice() -> AudioDeviceID {
+    private static func getOutputDevice() -> AudioDeviceID {
         // Set up device ID.
         var deviceID = AudioDeviceID(0)
         var deviceIDSize = UInt32(sizeofValue(deviceID))
@@ -39,7 +39,7 @@ class VolumeController {
         return deviceID
     }
   
-    private func getVolumeProperyAddress() -> AudioObjectPropertyAddress {
+    private static func getVolumeAddress() -> AudioObjectPropertyAddress {
         // Get address of master volume property.
         return AudioObjectPropertyAddress(
             mSelector: AudioObjectPropertySelector(
@@ -49,7 +49,7 @@ class VolumeController {
                 kAudioObjectPropertyElementMaster))
     }
 
-    func getVolume() -> Float32 {
+    static func getVolume() -> Float32 {
         // Get output device ID.
         let deviceID = getOutputDevice()
 
@@ -59,7 +59,7 @@ class VolumeController {
         volumeSize.memory = UInt32(sizeof(Float32))
 
         // Get address of volume property.
-        var propertyAddress = getVolumeProperyAddress()
+        var propertyAddress = getVolumeAddress()
 
         // Get volume property data.
         let error = AudioHardwareServiceGetPropertyData(
@@ -91,7 +91,7 @@ class VolumeController {
         return volume
     }
 
-    func setVolume(vol: Float32) {
+    static func setVolume(vol: Float32) {
         // Get output device ID.
         let deviceID = getOutputDevice()
 
@@ -100,7 +100,7 @@ class VolumeController {
         let volumeSize = UInt32(sizeofValue(volume))
 
         // Get address of volume property.
-        var propertyAddress = getVolumeProperyAddress()
+        var propertyAddress = getVolumeAddress()
 
         // Set volume property data.
         let error = AudioHardwareServiceSetPropertyData(
