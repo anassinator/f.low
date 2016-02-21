@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8919B1121C795EBD009D929E /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919B1111C795EBD009D929E /* FlowController.swift */; };
 		89DD49341C790BE8002DFBBC /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD49331C790BE8002DFBBC /* StatusMenuController.swift */; };
 		89DD49361C79154D002DFBBC /* VolumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD49351C79154D002DFBBC /* VolumeController.swift */; };
 		FACC80511C78F275006E7B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC80501C78F275006E7B46 /* AppDelegate.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8919B1111C795EBD009D929E /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		89DD49331C790BE8002DFBBC /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		89DD49351C79154D002DFBBC /* VolumeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeController.swift; sourceTree = "<group>"; };
 		FACC804D1C78F275006E7B46 /* f.low.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = f.low.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,7 @@
 				FACC80521C78F275006E7B46 /* Assets.xcassets */,
 				FACC80541C78F275006E7B46 /* MainMenu.xib */,
 				89DD49351C79154D002DFBBC /* VolumeController.swift */,
+				8919B1111C795EBD009D929E /* FlowController.swift */,
 				FACC80571C78F275006E7B46 /* Info.plist */,
 			);
 			path = f.low;
@@ -137,6 +140,7 @@
 				89DD49341C790BE8002DFBBC /* StatusMenuController.swift in Sources */,
 				89DD49361C79154D002DFBBC /* VolumeController.swift in Sources */,
 				FACC80511C78F275006E7B46 /* AppDelegate.swift in Sources */,
+				8919B1121C795EBD009D929E /* FlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
