@@ -13,7 +13,7 @@
 		FACC80511C78F275006E7B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC80501C78F275006E7B46 /* AppDelegate.swift */; };
 		FACC80531C78F275006E7B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACC80521C78F275006E7B46 /* Assets.xcassets */; };
 		FACC80561C78F275006E7B46 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACC80541C78F275006E7B46 /* MainMenu.xib */; };
-		FACFCCB41C7961050002ADDB /* VolumeMonitorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCCB31C7961050002ADDB /* VolumeMonitorController.swift */; };
+		FACFCCB41C7961050002ADDB /* VolumeMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCCB31C7961050002ADDB /* VolumeMonitor.swift */; };
 		FACFCCB61C7964FF0002ADDB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACFCCB51C7964FF0002ADDB /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		FACC80521C78F275006E7B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACC80551C78F275006E7B46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		FACC80571C78F275006E7B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FACFCCB31C7961050002ADDB /* VolumeMonitorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeMonitorController.swift; sourceTree = "<group>"; };
+		FACFCCB31C7961050002ADDB /* VolumeMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeMonitor.swift; sourceTree = "<group>"; };
 		FACFCCB51C7964FF0002ADDB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
