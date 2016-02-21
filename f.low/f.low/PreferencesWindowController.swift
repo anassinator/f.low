@@ -34,6 +34,8 @@ class PreferencesWindowController: NSWindowController {
     @IBOutlet weak var preferencesWindow: NSWindow!
     @IBOutlet weak var minSlider: NSSlider!
     @IBOutlet weak var maxSlider: NSSlider!
+    @IBOutlet weak var minLabel: NSTextField!
+    @IBOutlet weak var maxLabel: NSTextField!
 
     convenience init() {
         self.init(windowNibName: "PreferencesWindow")
@@ -43,15 +45,20 @@ class PreferencesWindowController: NSWindowController {
         super.windowDidLoad()
     
         self.window?.center()
+        self.window?.titlebarAppearsTransparent = true
         self.window?.makeKeyAndOrderFront(nil)
         NSApp.activateIgnoringOtherApps(true)
         self.window?.releasedWhenClosed = false
+        self.window?.appearance = NSAppearance(named:
+            NSAppearanceNameVibrantDark)
     }
 
     @IBAction func minVolumeChanged(sender: NSSlider) {
         Preferences.setMinVolume(Float32(sender.doubleValue / 100))
+        minLabel.stringValue = "\(Int(sender.doubleValue))"
     }
     @IBAction func maxVolumeChanged(sender: NSSlider) {
         Preferences.setMaxVolume(Float32(sender.doubleValue / 100))
+        maxLabel.stringValue = "\(Int(sender.doubleValue))"
     }
 }
