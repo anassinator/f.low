@@ -6,28 +6,24 @@
 //  Copyright © 2016 Owen Li. All rights reserved.
 //
 
-
+import CoreAudio
 import Foundation
 import AVFoundation
-import CoreAudio
-
-
 
 class VolumeMonitor: NSObject {
     
     var recorder: AVAudioRecorder!
     var levelTimer =  NSTimer()
     var lowPassResults: Double = 0.0
-    var cb: ((Float32,Float32) -> Void)? = nil
-    
-    
-    
-    func start(cb: (Float32,Float32) -> Void) {
-        
+    var cb: ((Float32, Float32) -> Void)? = nil
+
+    func start(cb: (Float32, Float32) -> Void) {
         self.cb = cb
         
-        let documents: AnyObject = NSSearchPathForDirectoriesInDomains( NSSearchPathDirectory.DocumentDirectory,  NSSearchPathDomainMask.UserDomainMask, true)[0]
-        let str =  documents.stringByAppendingPathComponent("recordTest.mp4")
+        let documents: AnyObject = NSSearchPathForDirectoriesInDomains(
+            NSSearchPathDirectory.DocumentDirectory,
+            NSSearchPathDomainMask.UserDomainMask, true)[0]
+        let str = documents.stringByAppendingPathComponent("recordTest.mp4")
         let url = NSURL.fileURLWithPath(str as String)
         
         let recordSettings = [AVSampleRateKey : NSNumber(float: Float(44100.0)),
@@ -56,6 +52,11 @@ class VolumeMonitor: NSObject {
             CFRunLoopRun()
         }
     }
+    
+    func stop() {
+        levelTimer.invalidate()
+    }
+
     func levelTimerCallback(timer: NSTimer) {
         recorder.updateMeters()
         let average = recorder.averagePowerForChannel(0)
@@ -65,9 +66,4 @@ class VolumeMonitor: NSObject {
         }
     }
 
-}
-
-func cb2(average: Float32, peak : Float32) {
-    print(average)
-    print(peak)
 }

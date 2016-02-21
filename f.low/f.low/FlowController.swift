@@ -9,6 +9,8 @@
 import Cocoa
 
 class FlowController {
+    private let vm = VolumeMonitor()
+
     private func dBToLinear(db: Float32) -> Float32 {
         // Convert dB scale to linear scale.
         // Solving for x: db = 20 * log_10 (x).
@@ -18,5 +20,19 @@ class FlowController {
     private func mapTo(x: Float32, min: Float32, max: Float32) -> Float32 {
         // Maps x of range 0 to 1 to range min to max.
         return x * (max - min) + min
+    }
+    
+    func start() {
+        vm.start(update)
+    }
+    
+    func stop() {
+        vm.stop()
+    }
+    
+    func update(average: Float32, peak: Float32) {
+        let originalVolume = dBToLinear(average)
+        let volume = mapTo(originalVolume, min: 0.2, max: 1.0)
+        VolumeController.setVolume(volume)
     }
 }
